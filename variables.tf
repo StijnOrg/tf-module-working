@@ -34,7 +34,7 @@ locals {
     subdomain        = "na"
     creationdate     = timestamp()
   }
-  
+
   resource_suffix = module.humanitecvars.humanitec_env_type_resource_suffix_mapping[var.env_type]
   name            = var.env_type == var.env_id ? "${module.naming.resource_group.slug}-sol-${var.app_id}-${local.resource_suffix}" : "${module.naming.resource_group.slug}-sol-${var.app_id}-${var.env_id}-${local.resource_suffix}"
 
