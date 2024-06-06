@@ -34,7 +34,7 @@ Humanitec Terraform module for creating solution resource groups via base-env
 |------|-------------|------|---------|:--------:|
 | <a name="input_app_id"></a> [app\_id](#input\_app\_id) | Name of the solution which will use this user managed identity | `string` | n/a | yes |
 | <a name="input_env_id"></a> [env\_id](#input\_env\_id) | Humanitec env id | `string` | n/a | yes |
-| <a name="input_env_type"></a> [env\_type](#input\_env\_type) | Humanitec Environment type. | `string` | `"${resources['config.default#general-configs'].outputs.env_type}"` | no |
+| <a name="input_env_type"></a> [env\_type](#input\_env\_type) | Humanitec Environment type. | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | The Azure location where the resource will be deployed. | `string` | `"Germany West Central"` | no |
 | <a name="input_res_id"></a> [res\_id](#input\_res\_id) | Name base of the user managed identity to be created. | `string` | n/a | yes |
 
@@ -43,5 +43,5 @@ Humanitec Terraform module for creating solution resource groups via base-env
 | Name | Description |
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | n/a |
-| <a name="output_name"></a> [name](#output\_name) | n/a |
+| <a name="output_resource_group_name"></a> [resource\_group\_name](#output\_resource\_group\_name) | n/a |
 <!-- END_TF_DOCS -->

@@ -16,7 +16,6 @@ variable "app_id" {
 variable "env_type" {
   type        = string
   description = "Humanitec Environment type."
-  default     = "$${resources['config.default#general-configs'].outputs.env_type}"
 }
 
 variable "location" {
