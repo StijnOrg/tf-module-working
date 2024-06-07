@@ -32,7 +32,7 @@ variable "tags" {
 
 locals {
   tags = merge(var.tags, {
-    "source" ="platform-humanitec"
+    "source"       = "platform-humanitec"
     "creationdate" = timestamp()
   })
 

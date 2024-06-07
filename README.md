@@ -37,6 +37,7 @@ Humanitec Terraform module for creating solution resource groups via base-env
 | <a name="input_env_type"></a> [env\_type](#input\_env\_type) | Humanitec Environment type. | `string` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | The Azure location where the resource will be deployed. | `string` | `"Germany West Central"` | no |
 | <a name="input_res_id"></a> [res\_id](#input\_res\_id) | Name base of the user managed identity to be created. | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to the resource. | `map(string)` | `{}` | no |
 
 ## Outputs
 
