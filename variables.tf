@@ -24,15 +24,17 @@ variable "location" {
   default     = "Germany West Central"
 }
 
+variable "tags" {
+  type        = map(string)
+  description = "A mapping of tags to assign to the resource."
+  default     = {}
+}
+
 locals {
-  tags = {
-    source           = "platform-humanitec"
-    environment      = var.env_id
-    environment_type = var.env_type
-    domain           = "na"
-    subdomain        = "na"
-    creationdate     = timestamp()
-  }
+  tags = merge(var.tags, {
+    source ="platform-humanitec"
+    creationdate = timestamp()
+  })
 
   resource_suffix = module.humanitecvars.humanitec_env_type_resource_suffix_mapping[var.env_type]
   name            = var.env_type == var.env_id ? "${module.naming.resource_group.slug}-sol-${var.app_id}-${local.resource_suffix}" : "${module.naming.resource_group.slug}-sol-${var.app_id}-${var.env_id}-${local.resource_suffix}"
