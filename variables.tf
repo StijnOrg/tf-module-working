@@ -32,10 +32,9 @@ variable "tags" {
 
 locals {
   tags = merge(var.tags, {
-    "source"          = "platform-humanitec"
-    "creationdate"    = timestamp()
-    "environmenttype" = var.env_type
-    "environment"     = var.env_id
+    "source"            = "platform-humanitec"
+    "creationTimestamp" = timestamp()
+    "environmentType"   = var.env_type
   })
 
   resource_suffix = module.humanitecvars.humanitec_env_type_resource_suffix_mapping[var.env_type]
